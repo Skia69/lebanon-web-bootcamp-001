@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #f39264 0%,
+    #f2606f 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+button,
+input {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: inherit;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+.todoList {
+  width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+}
+.cover-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1522199670076-2852f80289c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+.cover-img::after {
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#today-date {
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  z-index: 10;
+  font-weight: 700;
+}
+.content {
+  padding: 10px 20px;
+}
+form {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #8e979c;
+}
+form button {
+  background: white;
+  border: none;
+}
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add-todo {
+  cursor: pointer;
+}
+
+.content input[type="text"],
+.content input[type="date"] {
+  font-weight: 600;
+  outline: none;
+}
+/* trying to fix a bug */
+.fas.fa-plus {
+  pointer-events: none;
+}
+.content .todos {
+  height: 220px;
+  overflow: auto;
+}
+.todos .todo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.description {
+  margin-left: 15px;
+}
+
+.description-title {
+  font-weight: 600;
+}
+
+.description-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+}
+.far.fa-trash-alt {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.fas.fa-edit {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.high,
+.medium,
+.low {
+  font-size: 14px;
+}
+
+.high {
+  color: red;
+  margin-left: 4px;
+}
+
+.medium {
+  color: yellow;
+  margin-left: 4px;
+}
+
+.low {
+  color: green;
+  margin-left: 4px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.bg-red {
+  background-color: rgba(255, 0, 0, 0.15);
+  border-radius: 10px;
+}

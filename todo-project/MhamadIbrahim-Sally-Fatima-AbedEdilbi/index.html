@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e3c74ed7da.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="todoList">
+      <div class="cover-img">
+        <p id="today-date"></p>
+      </div>
+      <div class="content">
+        <form id="form">
+          <div class="input-group">
+            <input type="date" name="" id="datePicker" value="" required />
+            <select id="select">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              name="add"
+              placeholder="Any plans for today?"
+              value=""
+              required
+              pattern=" {0,}\S+"
+            />
+            <button class="add-todo" type="submit" id="submitButton">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </form>
+        <ul class="todos"></ul>
+      </div>
+    </div>
+  </body>
+</html>

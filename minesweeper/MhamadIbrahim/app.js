@@ -12,8 +12,8 @@ const isOutOfBounds = (grid, i, j) => {
 
 const solve = (grid) => {
   //Construct a new matrix based on the original matrix's size and fill it with zeros
-  let ans = new Array(matrix[0].length).fill([]);
-  ans = ans.map(() => new Array(matrix[0].length).fill(0));
+  let ans = new Array(grid[0].length).fill([]);
+  ans = ans.map(() => new Array(grid[0].length).fill(0));
 
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[0].length; j++) {
